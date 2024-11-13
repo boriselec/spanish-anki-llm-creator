@@ -1,0 +1,8 @@
+.cpcache
+.git
+.nrepl-port
+
+src/settings.clj
+
+input.txt
+output.csv
