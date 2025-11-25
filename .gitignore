@@ -1,6 +1,7 @@
 .cpcache
-.git
 .nrepl-port
+.lsp
+.clj-kondo
 
 src/settings.clj
 
