@@ -1,5 +1,5 @@
 (ns core
-  (:require [settings :refer [api-key]]
+  (:require [dotenv :refer [env]]
             [prompts :refer [system-prompt, correction-prompt, card-prompt]]
             [clojure.string :as str]
             [wkok.openai-clojure.api :as api]))
@@ -13,7 +13,8 @@
          :temperature 0.1
          :messages [{:role "system" :content system-prompt}
                     {:role "user" :content question}]}
-        {:api-key api-key})
+        {:api-key (env :OPENAI_API_KEY)
+         :api-endpoint (env :OPENAI_API_URL)})
       :choices first :message :content))
 
 (defn -main []

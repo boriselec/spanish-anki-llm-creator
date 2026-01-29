@@ -3,7 +3,7 @@
 .lsp
 .clj-kondo
 
-src/settings.clj
+.env
 
 input.txt
 output.csv
